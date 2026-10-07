@@ -12,5 +12,5 @@ class GetUser(GetUserPort):
         async with self._uow:
             user = await self._uow.users.get_by_id(user_id)
             if user is None:
-                raise UserNotFoundError()
+                raise UserNotFoundError
             return user
